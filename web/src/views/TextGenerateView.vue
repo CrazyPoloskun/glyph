@@ -1,3 +1,6 @@
+<script setup>
+    import selectLanguage from '@/components/select-language.vue';
+</script>
 
 <template>
   <div class="main">
@@ -24,141 +27,7 @@
                 <h2 class="wordsNum">{{ wordsNum }} слов</h2>
             </div>
 
-            <select class="textLanguage" v-model="textLanguage">
-                <option value="" selected disabled hidden>Язык</option>
-                <option value="ru">Русский</option>
-                <option value="en">Английский</option>
-                <option value="fr">Французский </option>
-                <option value="sq">Албанский</option>
-                <option value="am">Амхарский</option>
-                <option value="ar">Арабский</option>
-                <option value="hy">Армянский</option>
-                <option value="as">Ассамский</option>
-                <option value="ay">Аймара</option>
-                <option value="az">Азербайджанский</option>
-                <option value="bm">Бамбара</option>
-                <option value="eu">Баскский</option>
-                <option value="be">Белорусский</option>
-                <option value="bn">Бенгальский</option>
-                <option value="bho">Бходжпури</option>
-                <option value="bs">Боснийский</option>
-                <option value="bg">Болгарский</option>
-                <option value="ca">Каталанский</option>
-                <option value="ceb">Себуанский</option>
-                <option value="zh-CN">Китайский (упрощенный)</option>
-                <option value="zh-TW">Китайский (традиционный)</option>
-                <option value="co">Корсиканский</option>
-                <option value="hr">Хорватский</option>
-                <option value="cs">Чешский</option>
-                <option value="da">Датский</option>
-                <option value="dv">Дивехи</option>
-                <option value="doi">Донгри</option>
-                <option value="nl">Голландский</option>
-                <option value="en">Английский</option>
-                <option value="eo">Эсперанто</option>
-                <option value="et">Эстонский</option>
-                <option value="ee">Эве</option>
-                <option value="tl">Филиппинский</option>
-                <option value="fi">Финский</option>
-                <option value="fr">Французский</option>
-                <option value="fy">Фризский</option>
-                <option value="gl">Галисийский</option>
-                <option value="ka">Грузинский</option>
-                <option value="de">Немецкий</option>
-                <option value="el">Греческий</option>
-                <option value="gn">Гуарани</option>
-                <option value="gu">Гуджарати</option>
-                <option value="ht">Гаитянский креольский</option>
-                <option value="ha">Хауса</option>
-                <option value="haw">Гавайский</option>
-                <option value="iw">Иврит</option>
-                <option value="hi">Хинди</option>
-                <option value="hmn">Хмонг</option>
-                <option value="hu">Венгерский</option>
-                <option value="is">Исландский</option>
-                <option value="ig">Игбо</option>
-                <option value="ilo">Илокано</option>
-                <option value="id">Индонезийский</option>
-                <option value="ga">Ирландский</option>
-                <option value="it">Итальянский</option>
-                <option value="ja">Японский</option>
-                <option value="jw">Яванский</option>
-                <option value="kn">Каннада</option>
-                <option value="kk">Казахский</option>
-                <option value="km">Кхмерский</option>
-                <option value="rw">Киньяруанда</option>
-                <option value="gom">Конкани</option>
-                <option value="ko">Корейский</option>
-                <option value="kri">Крио</option>
-                <option value="ku">Курдский</option>
-                <option value="ckb">Курдский (сорани)</option>
-                <option value="ky">Киргизский</option>
-                <option value="lo">Лаосский</option>
-                <option value="la">Латынь</option>
-                <option value="lv">Латышский</option>
-                <option value="ln">Лингала</option>
-                <option value="lt">Литовский</option>
-                <option value="lb">Люксембургский</option>
-                <option value="mk">Македонский</option>
-                <option value="mai">Майтхили</option>
-                <option value="mg">Малагасийский</option>
-                <option value="ms">Малайский</option>
-                <option value="ml">Малаялам</option>
-                <option value="mt">Мальтийский</option>
-                <option value="mi">Маори</option>
-                <option value="mr">Маратхи</option>
-                <option value="mni">Манипури</option>
-                <option value="lus">Мизо</option>
-                <option value="mn">Монгольский</option>
-                <option value="my">Мьянманский</option>
-                <option value="ne">Непальский</option>
-                <option value="no">Норвежский</option>
-                <option value="or">Ория</option>
-                <option value="om">Оромо</option>
-                <option value="ps">Пушту</option>
-                <option value="fa">Персидский</option>
-                <option value="pl">Польский</option>
-                <option value="pt">Португальский</option>
-                <option value="pa">Пенджабский</option>
-                <option value="qu">Кечуа</option>
-                <option value="ro">Румынский</option>
-                <option value="ru">Русский</option>
-                <option value="sm">Самоанский</option>
-                <option value="sa">Санскрит</option>
-                <option value="gd">Шотландский гэльский</option>
-                <option value="sr">Сербский</option>
-                <option value="st">Сесото</option>
-                <option value="sn">Шона</option>
-                <option value="sd">Синдхи</option>
-                <option value="si">Сингальский</option>
-                <option value="sk">Словацкий</option>
-                <option value="sl">Словенский</option>
-                <option value="so">Сомалийский</option>
-                <option value="es">Испанский</option>
-                <option value="su">Сунданский</option>
-                <option value="sw">Суахили</option>
-                <option value="sv">Шведский</option>
-                <option value="tg">Таджикский</option>
-                <option value="ta">Тамильский</option>
-                <option value="tt">Татарский</option>
-                <option value="te">Телугу</option>
-                <option value="th">Тайский</option>
-                <option value="ti">Тигринья</option>
-                <option value="ts">Тсонга</option>
-                <option value="tr">Турецкий</option>
-                <option value="tk">Туркменский</option>
-                <option value="ak">Тви</option>
-                <option value="uk">Украинский</option>
-                <option value="ur">Урду</option>
-                <option value="ug">Уйгурский</option>
-                <option value="uz">Узбекский</option>
-                <option value="vi">Вьетнамский</option>
-                <option value="cy">Валлийский</option>
-                <option value="xh">Коса</option>
-                <option value="yi">Идиш</option>
-                <option value="yo">Йоруба</option>
-                <option value="zu">Зулу</option>       
-            </select>
+            <selectLanguage v-model="textLanguage" />
 
             <select v-model="textType">
               <option value="" selected disabled hidden>Жанр</option>
@@ -188,10 +57,10 @@
           <div class="text-generation-output-box">
             <div class="text-options-menu">
                 <div class="text-action-menu-open">
-                    <button v-if="this.isMenu == false" class="text-action-btn" v-on:click="() => {this.isMenu = true}"><img src="../assets/icons/options.png"/></button>
-                    <button v-if="this.isMenu == true" class="text-action-btn" v-on:click="() => {this.isMenu = false}"><img src="../assets/icons/close.png"/></button>
+                    <button v-if="isMenu == false" class="text-action-btn" v-on:click="() => {this.isMenu = true}"><img src="../assets/icons/options.png"/></button>
+                    <button v-if="isMenu == true" class="text-action-btn" v-on:click="() => {this.isMenu = false}"><img src="../assets/icons/close.png"/></button>
                 </div>
-                <div v-if="this.isMenu == true" class="text-action-btns-menu">
+                <div v-if="isMenu == true" class="text-action-btns-menu">
                     <button class="text-action-btn" v-on:click="copyToClipBoard"><img src="../assets/icons/copy.png"/></button>
                     <div class="text-action-separator"></div>
                     <button class="text-action-btn" v-if="this.isTTS == false" v-on:click="() => {this.isTTS = true}"><img src="../assets/icons/sound.png"/></button>
@@ -230,7 +99,8 @@ export default {
             audioPlayer: document.getElementsByClassName("audio-player"),
             audioSrc: "",
             charsNum: 0,
-            wordsNum: 0
+            wordsNum: 0,
+            baseUrl: import.meta.env.VITE_BASE_AI_API_URL
         }
     },
     methods: {
@@ -287,7 +157,7 @@ export default {
                 this.isLoading = true
                 this.isFullLoaded = false
                 
-                fetch(`http://localhost:3000/api/generate-story`, {
+                fetch(`${this.baseUrl}/generate-story`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -329,11 +199,6 @@ export default {
 </script>
 
 <style>
-
-.audio-player {
-    display: none;
-}
-
 .charsNum {
     font-size: 15px;
     color: rgb(79, 79, 79);
@@ -472,44 +337,6 @@ export default {
 
 .error-box img {
     margin-left: 4%;   
-}
-
-.exports {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.export-file-btn {
-    width: 100%;
-    height: 50px;
-    margin-top: 20px;
-    border: none;
-    background-color: red;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-.export-audio-btn {
-    width: 100%;
-    height: 50px;
-    margin-top: 20px;
-    border: none;
-    background-color: red;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-    transition: all .3s;
-}
-
-
-.export-line {
-    width: 100%;
-    height: 4px;
-    background-color: rgb(77, 77, 77);
-    margin-top: 10px;
 }
 
 .ai-nav {

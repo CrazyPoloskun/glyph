@@ -73,7 +73,8 @@
             error: "",
             charsNum: 0,
             wordsNum: 0,
-            isMenu: false
+            isMenu: false,
+            baseUrl: import.meta.env.VITE_BASE_AI_API_URL
         }
       },
       methods: {
@@ -96,7 +97,7 @@
 
                     this.isLoading = true
 
-                    const response = await fetch("http://localhost:3000/api/generate-image", {
+                    const response = await fetch(`${this.baseUrl}/generate-image`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

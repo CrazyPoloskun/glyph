@@ -1,3 +1,6 @@
+<script setup>
+import selectLanguage from '@/components/select-language.vue';
+</script>
 
 <template>
   <div class="main">
@@ -19,16 +22,8 @@
             <h2>Тема III главы</h2>
             <textarea placeholder="Ваша идея..." v-model="textPromptChapter3"></textarea>
 
-            <select v-model="textLanguage">
-              <option value="" selected disabled hidden>Язык</option>
-              <option value="ru">Русский</option>
-              <option value="en">Английский</option>
-              <option value="fr">Французский </option>
-              <option value="ar">Арабский</option>
-              <option value="ja">Японский</option>
-              <option value="el">Греческий</option>  
-              <option value="la">Латынь</option>            
-            </select>
+            <selectLanguage v-model="textLanguage" />
+
             <button class="btn-generate-book" v-on:click="generateBook">Отправить</button>
 
             <div class="error-box" v-if="isError">
@@ -92,6 +87,7 @@
 </template>
   
 <script>
+
 export default {
     data() {
         return {
@@ -110,7 +106,8 @@ export default {
             img1src: "",
             img2src: "",
             img3src: "",
-            data: []
+            data: [],
+            baseUrl: import.meta.env.VITE_BASE_AI_API_URL
         }
     },
     methods: {
@@ -201,7 +198,7 @@ export default {
                 if (textPrompt == "" || textPrompt == "" || textPrompt == "") {
                 }
                 
-                return fetch(`http://localhost:3000/api/generate-story`, {
+                return fetch(`${this.baseUrl}/generate-story`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -227,7 +224,7 @@ export default {
                     return new Exception("Все поля должны быть заполнены!")
                 }
 
-                const response = await fetch("http://localhost:3000/api/generate-image", {
+                const response = await fetch(`${this.baseUrl}/generate-image`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
