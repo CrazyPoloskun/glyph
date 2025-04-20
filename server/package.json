@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "Baldezhnye Ducks Team"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "gigachat": "^0.0.14",
+    "nodemon": "^3.1.9",
+    "uuid4": "^2.0.3"
+  }
+}
